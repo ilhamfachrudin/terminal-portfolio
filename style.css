@@ -1,0 +1,58 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #0a0a0f;
+  color: #00f0ff;
+  font-family: 'Courier New', monospace;
+  height: 100vh;
+  display: flex;
+  align-items: stretch;
+}
+
+#terminal {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#output {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 12px;
+  line-height: 1.7;
+}
+
+#output .line { margin-bottom: 4px; }
+#output .cmd-echo { color: #8be9fd; }
+#output .success { color: #50fa7b; }
+#output .error { color: #ff5555; }
+#output .info { color: #f1fa8c; }
+#output .muted { color: #6272a4; }
+#output pre {
+  color: #bd93f9;
+  white-space: pre-wrap;
+  padding: 8px 0;
+}
+
+#input-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid #1e1e2e;
+  padding-top: 12px;
+}
+
+.prompt { color: #50fa7b; white-space: nowrap; font-weight: bold; }
+
+#cmd {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #00f0ff;
+  font-family: inherit;
+  font-size: 1rem;
+  caret-color: #00f0ff;
+}
